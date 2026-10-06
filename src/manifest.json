@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "DBD 10Y Financial",
+  "version": "0.1.0",
+  "description": "Shows a Company's financial statements for all its Fiscal Years in one table on DBD DataWarehouse, instead of 5 at a time.",
+  "minimum_chrome_version": "111",
+  "host_permissions": [
+    "https://datawarehouse.dbd.go.th/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://datawarehouse.dbd.go.th/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

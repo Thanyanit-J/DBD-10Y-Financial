@@ -150,3 +150,6 @@ vite.config.ts.timestamp-*
 
 # macOS metadata
 .DS_Store
+
+# Build output (the unpacked extension)
+dist/

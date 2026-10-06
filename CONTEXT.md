@@ -58,6 +58,10 @@ _Avoid_: Page, tab, report type
 The financial data of one Company for one Fiscal Year, holding values for all three Statement Modes.
 _Avoid_: Row, statement
 
+**Window**:
+The Year Records that one DBD request loads: the requested Fiscal Year and the 4 before it. DBD itself loads only the Window ending at the Selected Fiscal Year.
+_Avoid_: Batch, page (DBD's request argument named `page` holds the Statement Mode, not a Window)
+
 **Last-Year Value**:
 A value inside a Year Record that repeats the same account for the previous Fiscal Year (the `…Ly` fields). Ratios have none.
 _Avoid_: Prior value, Ly value
