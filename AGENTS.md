@@ -1,6 +1,6 @@
 # DBD 10Y Financial
 
-Chrome extension that changes the DBD DataWarehouse frontend to show all 10 years of financial data at once (the site shows 5 years by default, even though its API returns 10).
+Chrome extension that changes the DBD DataWarehouse frontend to show up to 10 years of financial data at once (the site shows 5 years at a time). It requests only the Fiscal Years the site's own dropdown offers; see `docs/adr/0002-bound-history-to-dbd-fiscal-year-options.md`.
 
 ## Agent skills
 

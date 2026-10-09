@@ -32,6 +32,14 @@ _Avoid_: Year (when the era matters), FY
 The most recent Fiscal Year for which the Company filed financial statements, as given by its profile.
 _Avoid_: Current year
 
+**Fiscal Year Options**:
+The Fiscal Years the sidebar's Select Fiscal Year dropdown offers for a Company: the Default Fiscal Year and the 4 before it. The extension requests Windows only for these (ADR 0002).
+_Avoid_: Dropdown years, selectable years, allowed years
+
+**Default Fiscal Year**:
+DBD's initial selection in the dropdown when a Company's Financial Information tab opens: its Latest Fiscal Year, read from the profile. It anchors the Displayed Years and does not change when the user selects another year.
+_Avoid_: Initial year, anchor year
+
 **Selected Fiscal Year**:
 The Fiscal Year chosen in the sidebar's Select Fiscal Year dropdown. It is the newest Fiscal Year in the table.
 _Avoid_: Chosen year, filter year
@@ -45,8 +53,12 @@ A Fiscal Year that DBD returns as a Year Record with no values, because the Comp
 _Avoid_: Placeholder year, null year
 
 **Displayed Years**:
-The Fiscal Years that the table shows: every Fiscal Year from the Company's first Filed Year up to the Selected Fiscal Year, but never fewer than the 5 years that DBD shows by default.
+The Fiscal Years that the table shows: from the Company's first Filed Year, but no earlier than the Default Fiscal Year minus 9, up to the Selected Fiscal Year; at most 10, and never fewer than the 5 years that DBD shows by default.
 _Avoid_: Year window, year range, 10 years
+
+**Company Context**:
+What DBD's page knows about the current Company before any financial data loads: its Legal-Form Code, Registration Number, Default Fiscal Year and Fiscal Year Options. Without it the extension makes no request.
+_Avoid_: Profile (for this bundle), page state
 
 ### Financial Information
 
