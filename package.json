@@ -2,6 +2,7 @@
   "name": "dbd-10y-financial",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@12.10.1",
   "description": "Shows a Company's financial statements for all its Fiscal Years in one table on DBD DataWarehouse, instead of 5 at a time.",
   "type": "module",
   "scripts": {

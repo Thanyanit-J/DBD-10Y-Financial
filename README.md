@@ -10,11 +10,13 @@ The extension runs one script in the page's main world. It hooks the site's own 
 
 ## Build
 
+The project uses pnpm; the exact version is pinned in `package.json` (`packageManager`), so `corepack enable` once gives you the right one.
+
 ```sh
-npm install
-npm run build      # writes the unpacked extension to dist/
-npm test           # Vitest, against the fake DBD store in test/fake-dbd-store.ts
-npm run typecheck
+pnpm install
+pnpm build         # writes the unpacked extension to dist/
+pnpm test          # Vitest, against the fake DBD store in test/fake-dbd-store.ts
+pnpm typecheck
 ```
 
 ## Load in Chrome

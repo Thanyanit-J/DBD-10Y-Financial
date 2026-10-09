@@ -1,0 +1,5 @@
+# pnpm settings. pnpm 10+ reads them from this file, not from package.json.
+# pnpm runs no dependency build scripts unless they are allowed here:
+# esbuild's post-install step copies the platform binary into place.
+allowBuilds:
+  esbuild: true
