@@ -6,7 +6,9 @@ DBD DataWarehouse shows a Company's financial statements 5 Fiscal Years at a tim
 
 ## How it works
 
-The extension runs one script in the page's main world. It hooks the site's own finance store: when the site loads the 5-year window ending at the Selected Fiscal Year, the extension loads the window before it through the same store action and gives the site's table the merged Year Records. The site's own token handling, decryption and table drawing do the rest. See `docs/adr/0001-reuse-dbd-page-store.md` and the glossary in `CONTEXT.md`.
+The extension runs one script in the page's main world. It hooks the site's own finance store: when the site loads the 5-year window ending at the Selected Fiscal Year, the extension loads the older windows that the site's own Select Fiscal Year dropdown offers, through the same store action, and gives the site's table the merged Year Records. The site's own token handling, decryption and table drawing do the rest.
+
+The table is anchored to the Company's Default Fiscal Year (its latest filing): it shows at most ten years, from that year minus nine up to the selected year, and never asks DBD for a year outside the dropdown. A Company with a short history keeps DBD's normal five-year view. See `docs/adr/0001-reuse-dbd-page-store.md`, `docs/adr/0002-bound-history-to-dbd-fiscal-year-options.md` and the glossary in `CONTEXT.md`.
 
 ## Build
 
